@@ -13,8 +13,8 @@ Bazı uygulanan işlemler
 1- Tüm ülkeleri getirme işlemi
 ![sıralama4](https://user-images.githubusercontent.com/46906505/229234273-57e59af1-76d9-40dd-ae34-fad404138f25.PNG)
 
-2- Sadece belli bir ülke koduna sahip ülke
-![sıralama2](https://user-images.githubusercontent.com/46906505/229234308-bcce274c-8198-4498-b085-a6332331ae30.PNG)
+2- Ülke adınıa, ülke koduna, ülke phone koduna göre sıralama işlemleri yapılmıştır.
+![ulkecountrycode](https://github.com/DOGANAY06/Country-App-be/assets/46906505/c04c1801-6c4c-4d0c-9927-5e6964fd7770)
 
 3- Ülke telefon kodlarına göre azalan veya artan şekilde tüm ülkeler.
 ![sıralama2](https://user-images.githubusercontent.com/46906505/229234429-2b04a9a3-ead0-4b0e-8267-f1a8809e9edc.PNG)
