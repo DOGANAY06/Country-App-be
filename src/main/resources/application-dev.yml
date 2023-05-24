@@ -1,0 +1,26 @@
+# Geliştirme ortamı için konfigürasyonlar burada tanımlanır
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: countries-rest-api
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/countries_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Turkey
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        format_sql: true
+        jdbc.batch_size: 20
+        cache.use_query_cache: false
+        cache.use_second_level_cache: false
+        cache.use_structured_entries: false
+        cache.use_minimal_puts: false

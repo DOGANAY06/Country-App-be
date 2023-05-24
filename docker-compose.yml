@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+
+  mysql_db:
+    image: mysql
+    container_name: mysql-1
+    environment:
+      MYSQL_DATABASE: 'countries_db'
+      MYSQL_USER: 'dogan'
+      MYSQL_ROOT_PASSWORD: '123456'
+      MYSQL_PASSWORD: '123456'
+    volumes:
+      - ./mysql/db:/var/lib/mysql
+    ports:
+      - '3307:3306'
+
+  questionApp-be:
+    image: question-app-be
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/countries_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Turkey&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+    ports:
+      - '8081:8080'
+    depends_on:
+      - mysql_db
+
+networks:
+  questionApp-mysql:
